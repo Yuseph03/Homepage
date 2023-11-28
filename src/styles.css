@@ -7,10 +7,16 @@
 	--content-width: 50vw;
 	--skew-padding: calc(var(--content-width) * var(--magic-number));
 }
+
 body {
     margin: 0;
     background-color: var(--dark-blue);
     color: white;  
+}
+
+svg {
+    max-width: 25px;
+    fill: var(--dark-pink);
 }
 
 .head-container {
@@ -23,4 +29,12 @@ body {
     margin: 0 auto;
     padding: var(--skew-padding);
     transform: skewY(5deg);
+}
+
+.socials i{
+    color: var(--dark-pink);
+}
+
+main {
+    display: grid;
 }
