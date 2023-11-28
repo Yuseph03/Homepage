@@ -1,3 +1,26 @@
-html {
-    background-color: aqua;
+:root {
+    --dark-blue: #001B79;
+    --light-blue: #1640D6;
+    --dark-pink: #ED5AB3;
+    --light-pink: #ED5AB3;
+    --magic-number: 0.09719;
+	--content-width: 50vw;
+	--skew-padding: calc(var(--content-width) * var(--magic-number));
+}
+body {
+    margin: 0;
+    background-color: var(--dark-blue);
+    color: white;  
+}
+
+.head-container {
+    background: var(--light-blue); 	
+    transform: skewY(-5deg);
+}
+
+.content {
+    max-width: 50em;
+    margin: 0 auto;
+    padding: var(--skew-padding);
+    transform: skewY(5deg);
 }
