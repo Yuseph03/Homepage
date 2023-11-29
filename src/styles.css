@@ -1,40 +1,111 @@
 :root {
     --dark-blue: #001B79;
     --light-blue: #1640D6;
-    --dark-pink: #ED5AB3;
+    --dark-pink: #c50377;
     --light-pink: #ED5AB3;
     --magic-number: 0.09719;
-	--content-width: 50vw;
+	--content-width: 60vw;
 	--skew-padding: calc(var(--content-width) * var(--magic-number));
 }
 
 body {
     margin: 0;
     background-color: var(--dark-blue);
-    color: white;  
+    color: white; 
+    font-family: 'Nova Square', sans-serif;
+    font-size: 18px;
 }
 
 svg {
-    max-width: 25px;
+    max-width: 30px;
     fill: var(--dark-pink);
 }
 
 .head-container {
-    background: var(--light-blue); 	
-    transform: skewY(-5deg);
+    background-color: var(--dark-pink); 	
+    transform: skewY(-5deg) translateY(-100px);
+}
+
+.head-container img {
+    width: 500px;
 }
 
 .content {
-    max-width: 50em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 60vw;
     margin: 0 auto;
     padding: var(--skew-padding);
-    transform: skewY(5deg);
+    transform: skewY(5deg) translateY(100px);
 }
 
-.socials i{
-    color: var(--dark-pink);
+.head-text {
+    background-color: var(--light-blue);
+    padding: 15px;
 }
 
 main {
+   margin: 0 auto;
+   padding: 3em;
+}
+
+.projects {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 4em;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    border-radius: 8px;
+}
+
+.project-card,
+.project-card img {
+    max-width: 300px;
+}
+
+.project-text {
+    padding: 0 1em 2em 1em;
+    background-color: var(--light-blue);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3em;
+    background-color: var(--light-blue);
+}
+
+
+footer img {
+    max-width: 700px;
+}
+
+
+@media (max-width: 800px) {
+    .content, footer, main {
+        flex-wrap: wrap;
+    }
+    main {
+        padding: 2em 1em 2em 1em;
+    }
+    .head-container img {
+        max-width: 90vw;
+    }
+    /* .projects {
+        grid-template-columns: repeat(auto-fit, 1fr);
+    } */
+    .project-card img {
+        max-width: 90vw;
+    }
+    footer img {
+        max-width: 90vw;
+    }
 }
